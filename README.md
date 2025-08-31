@@ -1,6 +1,10 @@
 # Proyecto: Aplicación para Personalizar Pizzas
 
-Esta es una aplicación web interactiva que permite a los usuarios construir y personalizar su propia pizza. La interfaz guía al usuario a través de la selección del tipo de pizza, la adición de ingredientes extra y, finalmente, calcula el costo total del pedido.
+Esta es una aplicación web interactiva que permite a los usuarios construir y personalizar su propia pizza. El proyecto es una refactorización y modernización a tecnologías web (HTML, CSS y JavaScript) de un ejercicio de lógica hecho en Python años atrás durante mis estudios.
+
+Puedes encontrar la versión original de consola aquí: [Pizza Veget en Replit](https://replit.com/@WilliamLondono/pizza-veget?v=1#main.py)
+
+La interfaz actual guía al usuario a través de la selección del tipo de pizza, la adición de ingredientes extra y, finalmente, calcula el costo total del pedido.
 
 ## Descripción del Proyecto
 
