@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Tu Pizza Personalizada</title>
+</head>
+<body>
+  <header>
+    <h1>Tu Pizza Personalizada</h1>
+  </header>
+
+  <main class="pizza-dashboard">
+    <div class="dashboard-column" id="pizza-display">
+      <div id="emojiPizza">
+        <svg id="pizza-svg" width="240" height="240" viewBox="0 0 120 120">
+          <!-- Base -->
+          <circle cx="60" cy="60" r="50" fill="#f5ca7d" stroke="#d44b4b" stroke-width="5"></circle>
+          <!-- Rebanadas -->
+          <g class="slice"><path d="M60,60 L95,40 A50,50 0 0,1 100,60 Z" fill="#e4aa5b"></path></g>
+          <g class="slice"><path d="M60,60 L100,60 A50,50 0 0,1 95,80 Z" fill="#e4aa5b"></path></g>
+          <g class="slice"><path d="M60,60 L95,80 A50,50 0 0,1 80,95 Z" fill="#e4aa5b"></path></g>
+          <!-- Textura -->
+          <circle cx="70" cy="45" r="5" fill="#a62424"></circle>
+          <circle cx="85" cy="65" r="5" fill="#a62424"></circle>
+          <circle cx="75" cy="80" r="4" fill="#f1e05a"></circle>
+          <circle cx="65" cy="70" r="4" fill="#f1e05a"></circle>
+          <!-- Contenedor para toppings dinámicos -->
+          <g id="toppings-container"></g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="dashboard-column" id="pizza-controls">
+      <form id="pizzaForm">
+        <label for="tipo">¿Qué tipo de pizza deseas?</label>
+        <select id="tipo">
+          <option value="" selected disabled>Selecciona una opción</option>
+          <option value="vegetariana">Vegetariana</option>
+          <option value="noVegetariana">No Vegetariana</option>
+        </select>
+
+        <div id="infoTipo"></div>
+
+        <div id="ingredientes" style="display:none;">
+          <label>Selecciona ingredientes adicionales:</label>
+          <div id="ingredientes-checkboxes"></div>
+        </div>
+
+        <div id="total-container" style="display:none; text-align: right; font-size: 1.2rem; font-weight: 600; margin-top: 1rem;">
+          <strong>Total: </strong><span id="precio-total"></span>
+        </div>
+
+        <button type="submit">Generar pedido</button>
+      </form>
+
+      <div id="resultado" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <!-- Modal for Success Message -->
+  <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+      <div class="modal-icon success-icon"></div>
+      <button id="close-modal" class="close-button">&times;</button>
+      <div id="modal-message"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <!-- Audio Elements for Sound Effects -->
+  <audio id="add-sound" src="sounds/add.mp3" preload="auto"></audio>
+  <audio id="remove-sound" src="sounds/remove.mp3" preload="auto"></audio>
+</body>
+</html>
