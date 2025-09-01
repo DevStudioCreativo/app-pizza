@@ -74,13 +74,13 @@ header h1 {
 .dashboard-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-grow: 1; /* Allow columns to grow */
 }
 
 #pizza-display {
   flex-basis: 200px; /* Minimum width before wrapping */
   align-items: center;
+  justify-content: center; /* Center SVG vertically */
 }
 
 #pizza-controls {
