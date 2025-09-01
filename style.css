@@ -87,15 +87,20 @@ button:hover { background: #b83737; }
 /* Medium screens (tablets, etc.) */
 @media (max-width: 768px) {
   body {
-    padding: 0.5rem;
-    display: block; /* Change display from grid to block */
+
+    padding: 1rem;
+    display: flex; /* Use flexbox for vertical centering */
+    flex-direction: column;
+    justify-content: center;
   }
 
   .pizza-dashboard {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    max-width: 95%;
+    flex-direction: row; /* Keep row direction for tablets */
+    padding: 1.5rem;
+    gap: 1.5rem;
+    max-width: 90%; /* Adjust max-width */
+    width: 100%;
+    margin: 0 auto; /* Center the dashboard */
   }
 
   header h1 {
