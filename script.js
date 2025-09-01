@@ -86,10 +86,14 @@ tipoSelect.addEventListener('change', () => {
 
 checkboxesContainer.addEventListener('change', (event) => {
     if (event.target.type === 'checkbox') {
-        try {
-            if (event.target.checked) { addSound.currentTime = 0; addSound.play(); }
-            else { removeSound.currentTime = 0; removeSound.play(); }
-        } catch (error) { console.log("No se pudieron reproducir los sonidos. Asegúrate de que los archivos existen en la carpeta 'sounds'."); }
+        const soundToPlay = event.target.checked ? addSound : removeSound;
+        soundToPlay.currentTime = 0;
+        const playPromise = soundToPlay.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.error("Error al reproducir el sonido:", error);
+            });
+        }
     }
     calcularYMostrarPrecio();
 });
