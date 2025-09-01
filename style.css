@@ -209,7 +209,8 @@ button:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Fallback */
+  height: 100svh; /* Use small viewport height for mobile */
   background: rgba(0, 0, 0, 0.6);
   display: none;
   align-items: center;
