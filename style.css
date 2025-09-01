@@ -82,11 +82,96 @@ button:hover { background: #b83737; }
 .pizza-girando { animation: giroRebote 1s ease-in-out; transform-origin: center center; }
 .slice-rebote { animation: reboteSlice 1s ease-in-out; transform-origin: 60px 60px; }
 
-/* Media Query */
+/* --- Responsive Design --- */
+
+/* Medium screens (tablets, etc.) */
 @media (max-width: 768px) {
-  body { padding: 0.5rem; display: block; }
-  .pizza-dashboard { flex-direction: column; padding: 1rem; gap: 1rem; }
-  header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
-  #pizza-display { align-self: center; }
-  #pizza-svg { width: 180px; height: 180px; }
+  body {
+    padding: 0.5rem;
+    display: block; /* Change display from grid to block */
+  }
+
+  .pizza-dashboard {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    max-width: 95%;
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Reduce font size for smaller screens */
+    margin-bottom: 0.5rem;
+  }
+
+  #pizza-display {
+    align-self: center;
+  }
+
+  #pizza-svg {
+    width: 180px;
+    height: 180px;
+  }
+
+  #total-container {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small screens (smartphones, etc.) */
+@media (max-width: 480px) {
+  body {
+    padding: 0.25rem;
+  }
+
+  .pizza-dashboard {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  #pizza-svg {
+    width: 150px;
+    height: 150px;
+  }
+
+  label {
+    font-size: 0.85rem;
+  }
+
+  select,
+  #infoTipo,
+  #resultado {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .checkbox-container label {
+    font-size: 0.85rem;
+  }
+
+  #total-container {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  #modal-message h3 {
+    font-size: 1.3rem;
+  }
 }
