@@ -382,4 +382,8 @@ button:hover {
   #modal-message h3 {
     font-size: 1.3rem;
   }
+
+  #pizza-display {
+    flex-basis: 150px; /* Reduce pizza size on small screens */
+  }
 }
