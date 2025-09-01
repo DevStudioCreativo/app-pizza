@@ -212,9 +212,13 @@ button:hover {
   height: 100vh; /* Fallback */
   height: 100svh; /* Use small viewport height for mobile */
   background: rgba(0, 0, 0, 0.6);
-  display: none; /* Keep it hidden by default */
+  display: none;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
   animation: fadeIn 0.3s ease-out;
+  overflow-y: auto; /* Prevent body scroll */
+  padding: 2rem 0; /* Add space for scrolling */
 }
 
 .modal-content {
@@ -224,12 +228,10 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   max-width: 400px;
   width: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   text-align: center;
   animation: scaleUp 0.3s ease-out;
+  top: 25%;
 }
 
 .close-button {
